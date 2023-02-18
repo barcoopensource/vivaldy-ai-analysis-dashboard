@@ -1,0 +1,174 @@
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_300_italic-webfont.woff") format('woff');
+   font-weight: 300;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_300-webfont.woff") format('woff');
+   font-weight: 300;
+}
+
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_500_italic-webfont.woff") format('woff');
+   font-style: italic;
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_500-webfont.woff") format('woff');
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_700-webfont.woff") format('woff');
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: "museo-sans";
+   src: url("fonts/MuseoSans_900-webfont.woff") format('woff');
+   font-weight: 900;
+}
+
+
+
+html * {
+   font-family: "museo-sans", sans-serif !important;
+}
+
+#main-title {
+   align-self: center;
+}
+
+
+h1 {
+   color: rgb(240, 0, 0);
+   margin-left: 10px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+h3 {
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+
+#uploadzone {
+   margin: 0 auto;
+}
+
+#body{
+   margin: auto;
+}
+
+.model-selector-zone {
+   display: flex;
+}
+
+.model-selector-box{
+   margin: 2px 50px;
+   width: 800px;
+   height: 40px;
+   line-height: 20px;
+   border-width: 5px;
+   text-align: left;
+}
+
+
+
+a {
+   text-decoration: underline;
+   color: blue;
+}
+
+img {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+#tertiary-logo {
+   margin-top: 15px;
+}
+
+#metrics-and-graph {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+
+#shard-level-title, #degree-selector {
+   margin-left: 20px;
+}
+
+#slice-selection-ranking {
+   margin-top: 20px;
+   border-width: 0px;
+   border-style: solid;
+   display: flex;
+}
+
+#logos {
+   display: flex;
+   justify-content: right;
+}
+
+#header {
+   justify-content: space-between;
+   display: flex;
+   margin-bottom: 20px;
+}
+
+#graph-contents, #metric-contents, #legend-contents {
+   margin: 10px;
+}
+
+#graph-area, #metric-options {
+   border-width: 2px;
+   border-style: solid;
+}
+
+#legend-contents {
+   margin-top: 100px;
+}
+
+#metric-options {
+   width: 20%;
+}
+
+#graph-area {
+   margin-left: 20px;
+   width: 85%
+}
+
+
+/* unvisited link */
+a:link {
+   color: red;
+}
+ 
+ /* visited link */
+ a:visited {
+   color: red;
+}
+ 
+ /* mouse over link */
+ a:hover {
+   color: hotpink;
+}
+ 
+ /* selected link */
+ a:active {
+   color: blue;
+}
+
+label {
+   display: block;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}

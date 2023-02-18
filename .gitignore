@@ -1,0 +1,14 @@
+*.pdf
+*.png
+*.swp
+*.pyc
+*.p
+*.ps
+*.dot
+*.log
+
+*__pycache__*
+
+logs/*
+exports/*
+models/*
