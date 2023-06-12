@@ -11,7 +11,6 @@ class AUC(MetricSingleSlice, MetricCI_normal):
 
     @classmethod
     def metric_function(cls, s: DataSlice, Y: tuple, *args, **kwargs) -> DataSlice:
-        # from settings.settings_data_slicing_pipeline import settings
         import numpy as np
         classes = cls.settings.get('evaluation').get('binary_classification').get('classes')
         if len(Y[0].unique()) == 1 or len(Y[1].unique()) == 1:
@@ -27,7 +26,7 @@ class AUC(MetricSingleSlice, MetricCI_normal):
         import numpy as np
         if len(Y[0].unique()) == 1 or len(Y[1].unique()) == 1:
             return MetricCI_none.calc_CI(s, name=cls.name)
-        auc, auc_cov = delong_roc_variance(*Y)
+        auc, auc_cov = delong_roc_variance(*(np.array(x) for x in Y))  # (*Y)
         auc_std = np.sqrt(auc_cov)
         return super().calc_CI(s, auc, auc_std)
 

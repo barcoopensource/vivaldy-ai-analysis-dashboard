@@ -1,0 +1,2 @@
+,description,size,specificity,AUC_LB,fp,pn,fn,pp,ConfusionMatrix,tn,p,sensitivity_UB,tp,specificity_LB,AUC,n,sensitivity_LB,sensitivity,AUC_UB,specificity_UB,degree,Hispanic,age_first_child,age_group,bmi,density,ethnicity,hrt,lastmamm,menopause,nrelbc,rstproc,surgmeno,specificity_CI_diff,AUC_CI_diff,sensitivity_CI_diff
+0,,35050,0.7168404077636353,0.7146173580751274,9833,24971,78,10079,True,24893,324,0.8047970363048795,246,0.7120694370263836,0.7380498335114474,34726,0.7089114748561235,0.7592592592592593,0.7614823089477671,0.7215750884963821,0,,,,,,,,,,,,,,,

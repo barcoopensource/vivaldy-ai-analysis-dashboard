@@ -72,9 +72,11 @@ class MultithresholdCurveTab(Tab):
 
             if 'ROC' not in df_selected.columns:
                 multithreshold_data = self._calculate_ROC(loaded_models, label_options, slice_labels, sel_tuple)
-            else:
+            elif len(df_selected['ROC']) > 0:
                 multithreshold_data = json.loads(df_selected['ROC'].iloc[0])
                 multithreshold_data['fpr_mean'] = multithreshold_data['fpr']
+            else:
+                continue
 
             fpr = multithreshold_data['fpr']
             tpr = multithreshold_data['tpr']

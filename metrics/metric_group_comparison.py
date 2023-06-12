@@ -137,7 +137,12 @@ class KolmogorovSmirnoff(MetricGroupComparisonUnlabelledAbstract, MetricCI_Group
     def metric_function(cls, s: DataSlice, ref_s: DataSlice, y: pd.Series, ref_y: pd.Series, column_name: str, *args, **kwargs) -> Tuple[DataSlice, DataSlice]:
         from scipy.stats import ks_2samp
 
-        stat_result = ks_2samp(y, ref_y)._asdict()
+        if len(ref_y) > 0:
+            stat_result = ks_2samp(y, ref_y)._asdict()
+        else:
+            import numpy as np
+            stat_result = {'statistic': np.nan,
+                           'statistic_sign': np.nan}
 
         ks_value = stat_result['statistic'] * stat_result['statistic_sign']
         s.update_metric_value(f'{cls.name}_{column_name}_statistic', ks_value)

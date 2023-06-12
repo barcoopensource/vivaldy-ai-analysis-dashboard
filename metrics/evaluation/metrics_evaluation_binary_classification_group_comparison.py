@@ -12,10 +12,6 @@ class MetricsEvaluationBinaryClassificationGroupComparison(MetricsEvaluationGrou
     @classmethod
     def setup(cls, slices: List[DataSlice], ref_slices: List[DataSlice], Y: List, ref_Y: List, *args, **kwargs):
         super().setup(slices, ref_slices, Y, ref_Y, *args, **kwargs)
-        cls.classes = cls.settings.get('evaluation').get('binary_classification').get('classes')
-
-        # intialize metric classes
-        cls._initialize_metrics(cls.settings.get('evaluation').get('binary_classification').get('metrics_group_comparison').keys())
         return slices, ref_slices
 
     @classmethod

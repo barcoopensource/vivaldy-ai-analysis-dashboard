@@ -44,7 +44,8 @@ class DataSlicingPipelineAbstract:
         """This should be implemented in the child class"""
         pass
 
-    def process(self, df: pd.DataFrame):
+    def process(self, df: pd.DataFrame, stop_after_df_preparation: bool = False):
+        df.index = df.index.astype(str, copy=False)
         self.df_original = df
         X, y_gt, y_pred, df_export = self.prepare_dataframe(df)
         self.df_export = df_export
@@ -54,6 +55,9 @@ class DataSlicingPipelineAbstract:
 
         self.data_output_dir.mkdir(exist_ok=True, parents=True)
         df_export.to_csv(self.data_output_dir / 'df.csv', date_format="%Y-%m-%dT%H:%M:%S.%fZ")
+        if stop_after_df_preparation:
+            print(f"Data preparation finished for {self.data_output_dir.name}")
+            return
 
         self.dfs = {}
         self.slices = {}
@@ -108,7 +112,8 @@ class DataSlicingPipelineAbstract:
         return slices
 
     def get_metric_values(self, slices, mp_settings):
-        slices = self.evaluate_metrics(slices, mp_settings)
+        if len(slices) > 0:
+            slices = self.evaluate_metrics(slices, mp_settings)
         description_, size_, metric_values_ = self.extract_slice_info(slices)
 
         self.data = dict(

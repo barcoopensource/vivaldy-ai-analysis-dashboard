@@ -11,13 +11,6 @@ class MetricsEvaluationBinaryClassification(MetricsEvaluationAbstract):
     @classmethod
     def setup(cls, slices: List[DataSlice], Y: List, *args, **kwargs):
         super().setup(slices, Y, *args, **kwargs)
-        cls.classes = cls.settings.get('evaluation').get('binary_classification').get('classes')
-
-        # intialize metric classes
-        cls._initialize_metrics(cls.settings.get('evaluation').get('binary_classification').get('metrics').keys())
-        # metric: MetricAbstract
-        # for metric in cls.settings.get('evaluation').get('binary_classification').get('metrics').keys():
-        #     metric.setup(cls.settings)
         return slices
 
     @classmethod
@@ -45,10 +38,6 @@ class MetricsEvaluationBinaryClassificationMultithreshold(MetricsEvaluationBinar
     @classmethod
     def setup(cls, slices: List[DataSlice], Y: List, *args, **kwargs):
         super().setup(slices, Y, *args, **kwargs)
-        cls._initialize_metrics(cls.settings.get('evaluation').get('binary_classification').get('metrics_multi_threshold').keys())
-        # metric: MetricAbstract
-        # for metric in cls.settings.get('evaluation').get('binary_classification').get('metrics_multi_threshold').keys():
-        #     metric.setup(cls.settings)
         return slices
 
     @classmethod
