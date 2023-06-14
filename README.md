@@ -18,6 +18,8 @@ Key functionalities of this repository helping with this task are:
 * **Multiple ranking** methods, adaptable to the problem statement; including complex ranking methods taking into account the confidence interval, cfr. inferority/superiority statistical tests.
 * Inspect **multithreshold metrics** such as ROC at subpopulation level, with CI
 
+![figure abstract](https://github.com/barcoopensource/vivaldy-ai-analysis-dashboard/blob/main/assets/abstract.png?raw=true)
+
 # Setup
 Note: this package was tested to run with `Python 3.10` 
 
