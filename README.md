@@ -20,6 +20,11 @@ Key functionalities of this repository helping with this task are:
 
 ![figure abstract](https://github.com/barcoopensource/vivaldy-ai-analysis-dashboard/blob/main/assets/abstract.png?raw=true)
 
+
+For a tutorial on the functionality, see the following video:
+
+[![Vivaldy video tutorial](https://github.com/barcoopensource/vivaldy-ai-analysis-dashboard/blob/main/assets/video_screenshot.png?raw=true)](https://youtu.be/CxM5w6ULGq4 "Vivaldy video tutorial")
+
 # Setup
 Note: this package was tested to run with `Python 3.10` 
 
